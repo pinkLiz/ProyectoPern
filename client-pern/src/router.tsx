@@ -2,7 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 
 import Layout from "./layouts/layout";
 import Registros from "./views/registros";
-import NuevoRegistro from "./views/nuevoRegistro";
+import NuevoRegistro, {action as generarRegistro} from "./views/nuevoRegistro";
+
 
 export const router = createBrowserRouter([
     {
@@ -18,6 +19,7 @@ export const router = createBrowserRouter([
     {
         path: "registro/nuevo",
         element: <NuevoRegistro/>,
+        action: generarRegistro
     }
 ])
 
